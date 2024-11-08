@@ -85,6 +85,13 @@ bot.on('channelUpdate', (_, channel) => {
   }
 });
 
+Bun.serve({
+  port: 3000,
+  fetch() {
+    return new Response('It`s work1');
+  }
+});
+
 while (true) {
   for (const group of state)
     await group.loop();
