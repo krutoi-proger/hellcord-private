@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 import { CategoryChannel, ChannelType, VoiceChannel } from "discord.js";
 import { PrivateGroup, configStore } from "./library/PrivateGroup";
 
