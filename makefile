@@ -2,8 +2,7 @@ dev:
 	bun install
 	bun run --watch index.ts
 
-build:
+start:
 	bun install
-	bun build --target node --minify --outdir dist index.ts
-	cp package.json dist
-	echo "DISCORD_TOKEN=${DISCORD_TOKEN}" > dist/.env
+	bun start
+	echo "DISCORD_TOKEN=${DISCORD_TOKEN}" > .env
