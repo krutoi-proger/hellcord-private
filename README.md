@@ -1,15 +1,16 @@
-# discord-bot
+# hellcord-private
 
-To install dependencies:
+Простенький бот для приваток на сервере [HellCord](https://discord.gg/hellcord)
 
+### Установка и запуск
 ```bash
-bun install
+make dev
 ```
 
-To run:
+### Сборка
 
 ```bash
-bun run index.ts
+make build
 ```
 
 This project was created using `bun init` in bun v1.1.30. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

@@ -2,6 +2,9 @@
   "name": "discord-bot",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "^22.9.0"
