@@ -49,8 +49,8 @@ bot.on('ready', async () => {
       if (!(voice instanceof VoiceChannel))
         continue;
 
-      const ownerPerm = voice.permissionOverwrites.cache.find((perm) => {
-        return perm.allow.has('ManageChannels');
+      const ownerPerm = voice.permissionOverwrites.cache.find((perm, id) => {
+        return perm.allow.has('ManageChannels') && !guild.members.cache.get(id)?.user.bot;
       });
 
       if (!ownerPerm)
