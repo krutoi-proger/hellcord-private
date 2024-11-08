@@ -1,7 +1,7 @@
-FROM node:22.11.0
+FROM oven/bun
 WORKDIR /app
 COPY . .
-RUN npx -y bun install
+RUN bun install
 VOLUME /app/configs
-ENTRYPOINT npx -y bun run index.ts
+ENTRYPOINT bun run index.ts
 # Test
