@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:22.11.0
 WORKDIR /app
 COPY . .
 RUN npx -y bun install
