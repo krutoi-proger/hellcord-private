@@ -23,5 +23,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           source: "./dist/*"
           target: "/root/hellcord-private"
-          strip_components: 0
+          strip_components: 1
           rm: true
