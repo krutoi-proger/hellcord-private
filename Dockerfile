@@ -1,6 +1,6 @@
-FROM oven/bun
+FROM node
 WORKDIR /app
 COPY . .
-RUN bun install
+RUN npm install
 VOLUME /app/configs
-ENTRYPOINT bun run index.ts
+ENTRYPOINT npm start
