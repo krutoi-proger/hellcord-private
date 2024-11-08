@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "dist"
+          source: "./dist/*"
           target: "/root/hellcord-private"
           strip_components: 0
           rm: true
