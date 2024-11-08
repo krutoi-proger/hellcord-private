@@ -1,4 +1,9 @@
-name: deploy
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
 jobs:
   build:
     name: build
@@ -8,3 +13,15 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: make build
       - run: ls dist
+      
+      # - name: Upload
+      #   uses: appleboy/scp-action@v0.1.7
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     username: ${{ secrets.SSH_USER }}
+      #     key: ${{ secrets.SSH_KEY }}
+      #     port: ${{ secrets.SSH_PORT }}
+      #     source: "packages/client/dist/*"
+      #     target: "/var/www/openbomber"
+      #     strip_components: 3
+      #     rm: true
