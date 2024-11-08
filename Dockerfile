@@ -1,6 +1,6 @@
-FROM node
+FROM node:latest
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npx -y bun install
 VOLUME /app/configs
-ENTRYPOINT npm start
+ENTRYPOINT npx -y bun run index.ts
