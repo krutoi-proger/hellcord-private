@@ -1,4 +1,4 @@
-FROM chainguard/bun AS base
+FROM oven/bun:alpine AS base
 WORKDIR /app
 COPY . .
 RUN bun install
