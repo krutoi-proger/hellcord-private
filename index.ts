@@ -7,6 +7,7 @@ import { bot } from "./bot";
 const state = new Set<PrivateGroup>();
 
 bot.on('ready', async () => {
+  console.log('Bot starting');
   for (const config of PRIVATES) {
     // Fetch guild
     const guild = bot.guilds.cache.get(config.guildId);
@@ -91,6 +92,8 @@ Bun.serve({
     return new Response('It`s work1');
   }
 });
+
+console.log('Server starting on 3000');
 
 while (true) {
   for (const group of state)
