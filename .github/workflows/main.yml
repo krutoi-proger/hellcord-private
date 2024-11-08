@@ -14,14 +14,14 @@ jobs:
       - run: make build
       - run: ls dist
       
-      # - name: Upload
-      #   uses: appleboy/scp-action@v0.1.7
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     username: ${{ secrets.SSH_USER }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     port: ${{ secrets.SSH_PORT }}
-      #     source: "packages/client/dist/*"
-      #     target: "/var/www/openbomber"
-      #     strip_components: 3
-      #     rm: true
+      - name: Upload
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist"
+          target: "/root/hellcord-private"
+          strip_components: 0
+          rm: true
