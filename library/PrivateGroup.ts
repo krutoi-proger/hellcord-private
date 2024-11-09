@@ -47,7 +47,7 @@ export class PrivateGroup {
             const config = configStore.get(this.getId(member));
 
             const channel = await this.root.guild.channels.create({
-              name: config?.name ?? member.user.username,
+              name: config?.name ?? member.displayName ?? member.user.displayName,
               bitrate: config?.bitrate ?? undefined,
               rtcRegion: config?.region ?? undefined,
               userLimit: config?.limit ?? undefined,
