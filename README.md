@@ -1,14 +1,16 @@
-# hellcord-private
+#hellcord-private
 
-Простенький бот для приваток на сервере [HellCord](https://discord.gg/hellcord)
+ simple bot for voice channels in discord. You can test it here ---> [HellCord](https://discord.gg/hellcord)
 
-### Установка и запуск
-```bash
-make dev
-```
+# edit config.ts
 
-### Сборка
+# create .env file and DISCORD_TOKEN=YOU_BOT_TOKEN
 
-```bash
-make build
-```
+# use docker to run bot in your server
+
+# 1 you should install bun
+# install bun
+# 2 start bun
+# bun dev
+# 3 run the bot
+# bun start
